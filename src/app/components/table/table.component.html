@@ -1,0 +1,434 @@
+<app-add-data (addData)="addData($event)"></app-add-data>
+<table cdk-table [dataSource]="dataSource$" class="table table-striped mx-4">
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns$.value"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns$.value"></tr>
+
+
+    <ng-container cdkColumnDef="id">
+      <th cdk-header-cell *cdkHeaderCellDef> MSTID </th>
+      <td cdk-cell *cdkCellDef="let row"> {{row.id}} </td>
+      <!-- no footer -->
+    </ng-container>
+
+
+    <ng-container cdkColumnDef="match">
+        <th cdk-header-cell *cdkHeaderCellDef> Match </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.match}} </td>
+        <!-- no footer -->
+    </ng-container>
+
+    <ng-container cdkColumnDef="first">
+        <th cdk-header-cell *cdkHeaderCellDef> First Name </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.first}} </td>
+        <!-- no footer -->
+    </ng-container>
+
+    <ng-container cdkColumnDef="last">
+        <th cdk-header-cell *cdkHeaderCellDef> Last Name </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.last}} </td>
+        <!-- no footer -->
+    </ng-container>
+
+    <ng-container cdkColumnDef="nationality">
+        <th cdk-header-cell *cdkHeaderCellDef> Nationality </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.nationality}} </td>
+        <!-- no footer -->
+    </ng-container>
+    
+    <ng-container cdkColumnDef="Amature">
+        <th cdk-header-cell *cdkHeaderCellDef> Amature </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Amature}} </td>
+        <!-- no footer -->
+    </ng-container>
+    
+    <ng-container cdkColumnDef="CalculatedRankInteger">
+        <th cdk-header-cell *cdkHeaderCellDef> CalculatedRankInteger </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.CalculatedRankInteger}} </td>
+        <!-- no footer -->
+    </ng-container>
+
+        
+    <ng-container cdkColumnDef="Eastern">
+        <th cdk-header-cell *cdkHeaderCellDef> Eastern </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Eastern}} </td>
+        <!-- no footer -->
+    </ng-container>
+
+    <ng-container cdkColumnDef="Handicap">
+        <th cdk-header-cell *cdkHeaderCellDef> Handicap </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Handicap}} </td>
+        <!-- no footer -->
+    </ng-container>
+    
+    <ng-container cdkColumnDef="Hole1STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole1STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole1STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+        
+    <ng-container cdkColumnDef="Hole1Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole1Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole1Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+            
+    <ng-container cdkColumnDef="Hole2STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole2STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole2STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                
+    <ng-container cdkColumnDef="Hole2Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole2Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole2Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                    
+    <ng-container cdkColumnDef="Hole3STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole3STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole3STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole3Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole3Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole3Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole4STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole4STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole4STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole4Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole4Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole4Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole5STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole5STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole5STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole5Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole5Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole5Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole6STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole6STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole6STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole6Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole6Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole6Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole7STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole7STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole7STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole7Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole7Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole7Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole8STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole8STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole8STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole8Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole8Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole8Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole9STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole9STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole9STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole9Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole9Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole9Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole10STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole10STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole10STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole10Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole10Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole10Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole11STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole11STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole11STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole11Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole11Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole11Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole12STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole12STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole12STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole12Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole12Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole12Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole13STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole13STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole13STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole13Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole13Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole13Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole14STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole14STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole14STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole14Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole14Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole14Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole15STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole15STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole15STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole15Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole15Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole15Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole16STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole16STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole16STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole16Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole16Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole16Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole17STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole17STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole17STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole17Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole17Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole17Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole18STP">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole18STP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole18STP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                        
+    <ng-container cdkColumnDef="Hole18Strokes">
+        <th cdk-header-cell *cdkHeaderCellDef> Hole18Strokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Hole18Strokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                            
+    <ng-container cdkColumnDef="InSTP">
+        <th cdk-header-cell *cdkHeaderCellDef> InSTP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.InSTP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                
+    <ng-container cdkColumnDef="InStrokes">
+        <th cdk-header-cell *cdkHeaderCellDef> InStrokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.InStrokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                    
+    <ng-container cdkColumnDef="OutSTP">
+        <th cdk-header-cell *cdkHeaderCellDef> OutSTP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.OutSTP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                        
+    <ng-container cdkColumnDef="OutStrokes">
+        <th cdk-header-cell *cdkHeaderCellDef> OutStrokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.OutStrokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                            
+    <ng-container cdkColumnDef="SOD">
+        <th cdk-header-cell *cdkHeaderCellDef> SOD </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.SOD}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                
+    <ng-container cdkColumnDef="Score">
+        <th cdk-header-cell *cdkHeaderCellDef> Score </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Score}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                    
+    <ng-container cdkColumnDef="Sex">
+        <th cdk-header-cell *cdkHeaderCellDef> Sex </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Sex}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                        
+    <ng-container cdkColumnDef="SortPriority">
+        <th cdk-header-cell *cdkHeaderCellDef> SortPriority </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.SortPriority}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                            
+    <ng-container cdkColumnDef="TVName">
+        <th cdk-header-cell *cdkHeaderCellDef> TVName </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.TVName}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                
+    <ng-container cdkColumnDef="Today">
+        <th cdk-header-cell *cdkHeaderCellDef> Today </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.Today}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                    
+    <ng-container cdkColumnDef="TotalSTP">
+        <th cdk-header-cell *cdkHeaderCellDef> TotalSTP </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.TotalSTP}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                        
+    <ng-container cdkColumnDef="TotalStrokes">
+        <th cdk-header-cell *cdkHeaderCellDef> TotalStrokes </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.TotalStrokes}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                            
+    <ng-container cdkColumnDef="UniquePosition">
+        <th cdk-header-cell *cdkHeaderCellDef> UniquePosition </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.UniquePosition}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                
+    <ng-container cdkColumnDef="course">
+        <th cdk-header-cell *cdkHeaderCellDef> course </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.course}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                    
+    <ng-container cdkColumnDef="holesPlayed">
+        <th cdk-header-cell *cdkHeaderCellDef> holesPlayed </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.holesPlayed}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                        
+    <ng-container cdkColumnDef="isTeam">
+        <th cdk-header-cell *cdkHeaderCellDef> isTeam </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.isTeam}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                            
+    <ng-container cdkColumnDef="lastUpdated">
+        <th cdk-header-cell *cdkHeaderCellDef> lastUpdated </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.lastUpdated}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                
+    <ng-container cdkColumnDef="leaderboardID">
+        <th cdk-header-cell *cdkHeaderCellDef> leaderboardID </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.leaderboardID}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                    
+    <ng-container cdkColumnDef="matchID">
+        <th cdk-header-cell *cdkHeaderCellDef> matchID </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.matchID}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                        
+    <ng-container cdkColumnDef="orderInMatch">
+        <th cdk-header-cell *cdkHeaderCellDef> orderInMatch </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.orderInMatch}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                            
+    <ng-container cdkColumnDef="position">
+        <th cdk-header-cell *cdkHeaderCellDef> position </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.position}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                                
+    <ng-container cdkColumnDef="round">
+        <th cdk-header-cell *cdkHeaderCellDef> round </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.round}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                                    
+    <ng-container cdkColumnDef="status">
+        <th cdk-header-cell *cdkHeaderCellDef> status </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.status}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                                        
+    <ng-container cdkColumnDef="teeStart">
+        <th cdk-header-cell *cdkHeaderCellDef> teeStart </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.teeStart}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                                            
+    <ng-container cdkColumnDef="teeTime">
+        <th cdk-header-cell *cdkHeaderCellDef> teeTime </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.teeTime}} </td>
+        <!-- no footer -->
+    </ng-container>
+                                                                                                                                
+    <ng-container cdkColumnDef="tournamentID">
+        <th cdk-header-cell *cdkHeaderCellDef> tournamentID </th>
+        <td cdk-cell *cdkCellDef="let row"> {{row.tournamentID}} </td>
+        <!-- no footer -->
+    </ng-container>
+    <!-- ... -->
