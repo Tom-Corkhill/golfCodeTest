@@ -4,9 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CdkTableModule } from '@angular/cdk/table';
 
 import { AppComponent } from './app.component';
-import { AddDataComponent } from './components/add-data/add-data.component';
 import { HeaderComponent } from './components/layout/header/header.component';
-import { TableComponent } from './components/table/table.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { DataTableComponent } from './data-table/data-table.component';
@@ -23,9 +21,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AddDataComponent,
     HeaderComponent,
-    TableComponent,
     DataTableComponent
   ],
   imports: [

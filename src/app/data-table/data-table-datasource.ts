@@ -24,11 +24,10 @@ socket.on('data-update', (data) => {
   }
   console.log(newData);
   EXAMPLE_DATA.push(newData);
-  return EXAMPLE_DATA;
 });
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: DataTableItem[] = [
+let EXAMPLE_DATA: DataTableItem[] = [
 ];
 
 /**
@@ -53,7 +52,7 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
   connect(): Observable<DataTableItem[]> {
 
 
-    if (this.paginator && this.sort) {
+    if (this.paginator || this.sort || this.data) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
       return merge(observableOf(this.data), this.paginator.page, this.sort.sortChange)
